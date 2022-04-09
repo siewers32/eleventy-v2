@@ -1,0 +1,7 @@
+aside#right {
+    display: none;
+}
+
+aside#left > a.section-link {
+    display: inline;
+}
