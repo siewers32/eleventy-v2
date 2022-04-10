@@ -1,12 +1,12 @@
-// let menu = document.getElementById('menu');
-let pages = document.getElementById('left');
-// menu.addEventListener('click', function(e) {
-//     e.preventDefault();
-//     menuShow();
-// });
-// window.addEventListener('resize', function() {
-//     pages.style.display = 'block';
-// });
+let menu = document.getElementById('menu');
+let menuPanel = document.getElementById('menu-panel');
+menu.addEventListener('click', function(e) {
+    e.preventDefault();
+    menuShow();
+});
+window.addEventListener('resize', function() {
+    menuPanel.style.display = 'none';
+});
 
 
 const makeNavLinksSmooth = ( ) => {
@@ -41,7 +41,6 @@ const spyScrolling = ( ) => {
         for ( let s in sections ) {
             if (sections.hasOwnProperty(s) && sections[s].offsetTop <= (scrollPos + 100)) {
                 const id = sections[s].id;
-                console.log(id);
                 for (let a of document.querySelectorAll('.active')) {
                     a.classList.remove('active');
                 }
@@ -54,10 +53,10 @@ const spyScrolling = ( ) => {
 }
 
 function menuShow() {
-    if(pages.style.display === 'block') {
-        pages.style.display = 'none';
+    if(menuPanel.style.display === 'block') {
+        menuPanel.style.display = 'none';
     } else {
-        pages.style.display = 'block';
+        menuPanel.style.display = 'block';
     }
 }
 

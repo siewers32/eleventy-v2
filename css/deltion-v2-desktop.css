@@ -3,7 +3,6 @@ aside {
     top:77px;
     margin-top:32px;
     align-self: start;
-    /*min-width:200px;*/
     display:flex;
     flex-grow: 1;
     flex-shrink:0;
@@ -20,8 +19,4 @@ aside#right {
 
 aside#left {
     margin-right:32px;
-}
-
-footer a {
-
 }

@@ -42,9 +42,10 @@ h1, h2, h3 {
 
 h1 {
     line-height: calc(var(--lineheight) * 1.5);
-    padding-top: 100px;
+    padding-top: 132px;
     margin-top:-100px;
 }
+
 
 h2 {
     line-height: calc(var(--lineheight) * 1.2);
@@ -68,11 +69,14 @@ header {
     position:sticky;
     top:-55px;
     background-color: var(--c-bg);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
 }
 
 footer {
     background-color: var(--c-bg-dark);
 }
+
 
 div.container {
     width:90%;
@@ -86,13 +90,15 @@ div.container {
 }
 
 .standard {
-    width:16%;
+    width:150px;
+    flex-shrink: 0;
     transition: width 0.4s;
     padding-bottom: 8px;
 }
 
 .small {
-    width:12%;
+    width:105px;
+    flex-shrink: 0;
     transition: width 0.4s;
     padding-bottom: 2px;
 
@@ -108,6 +114,7 @@ main {
     align-self:flex-start;
 }
 
+
 div#content {
     flex-grow:3;
     align-self:flex-start;
@@ -121,8 +128,11 @@ a {
     text-decoration: none;
 }
 
+nav {
+    text-align:right;
+}
 
-nav a {
+a.nav-link, a#menu {
     display: inline-block;
     margin-left:32px;
 }
@@ -135,6 +145,38 @@ a:hover, a.active {
     border-bottom: 2px solid var(--c-brand);
     padding-bottom:0;
     text-decoration: none;
+}
+
+a#menu {
+    display:none;
+    position:relative;
+    top:6px;
+}
+
+div#menu {
+    background-color: var(--c-bg);
+}
+
+div#menu-panel {
+    padding-top:16px;
+    background-color: var(--c-bg);
+}
+
+div#menu-panel a {
+    display:block;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid var(--c-text);
+}
+
+div#menu-panel a:hover {
+    padding-bottom: 0px;
+    color: var(--c-bg-dark);
+    border-bottom:2px solid var(--c-brand);
+}
+a#menu:hover {
+    border-bottom:none;
+    color: var(--c-brand);
 }
 
 footer a {
